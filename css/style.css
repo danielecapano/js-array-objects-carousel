@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section {
+    padding: 0 2rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%);
+    display: block;
+    border: 3px solid black;
+    outline: none;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 999px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-prev {
+    top: 1rem;
+}
+
+.btn-next {
+    bottom: 1rem;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.30);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.thumbnail {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 200px;
+}
+
+.thumb {
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+}
+
+.thumb.active {
+    border: 2px solid #FFF;
+}
+
+.slide {
+    position: relative;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-body {
+    position: absolute;
+    bottom: 5rem;
+    width: calc(100% - 200px);
+    color: #FFF;
+    padding-inline: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.30);
+}
+
+.slide-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.slide-description {
+    line-height: 1.6;
+}
